@@ -1,5 +1,4 @@
-#include "BleClient.h"
-#include "nvs_flash.h"
+#include "BLEConfigs.hpp"
 
 extern "C" void app_main() {
     esp_err_t ret = nvs_flash_init();
@@ -9,7 +8,7 @@ extern "C" void app_main() {
     }
     ESP_ERROR_CHECK(ret);
 
-    BleClient clienteBLE(0x1809, 0x2A1C);  // Health Thermometer
-    clienteBLE.init();
-    clienteBLE.startScan();
+    // BleClient clienteBLE(0x1809, 0x2A1C);  // Health Thermometer
+    // clienteBLE.init();
+    // clienteBLE.startScan();
 }
